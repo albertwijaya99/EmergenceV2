@@ -1,0 +1,2 @@
+rootProject.name='Emergence'
+include ':app'

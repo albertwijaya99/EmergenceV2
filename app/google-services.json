@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "463203783727",
+    "firebase_url": "https://emer-ab21a.firebaseio.com",
+    "project_id": "emer-ab21a",
+    "storage_bucket": "emer-ab21a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463203783727:android:71e92543587f1b1d9062da",
+        "android_client_info": {
+          "package_name": "id.ac.umn.emergence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463203783727-ruq2987bi4lpe6diohcks5phvit9skv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.ac.umn.emergence",
+            "certificate_hash": "9d9eab89253febb9561d285ea84ccfa0ca1b5a5d"
+          }
+        },
+        {
+          "client_id": "463203783727-2d6isv0aalgej2ak3o9q0djbfbvpaum6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvM-OfWF3XB_vReVdYITFGsVEnIiegLN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463203783727-2d6isv0aalgej2ak3o9q0djbfbvpaum6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
