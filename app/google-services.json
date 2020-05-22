@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "463203783727-ruq2987bi4lpe6diohcks5phvit9skv8.apps.googleusercontent.com",
+          "client_id": "463203783727-8vc5frqntu71jd9s8mph1nmg228ggobg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "id.ac.umn.emergence",
-            "certificate_hash": "9d9eab89253febb9561d285ea84ccfa0ca1b5a5d"
+            "certificate_hash": "25c57cb08f9dcbdd441bd01e973f9e5c6eb7984b"
           }
         },
         {

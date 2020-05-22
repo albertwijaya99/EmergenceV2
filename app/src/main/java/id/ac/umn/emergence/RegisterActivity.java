@@ -67,6 +67,12 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    private boolean isNameValid(String name){
+        String regex = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(name);
+        return matcher.matches();
+    }
     private boolean isPhoneValid(String phone){
         String regex = "^(^\\+62|62|^08)(\\d{3,4}-?){2}\\d{3,4}$";
         Pattern pattern = Pattern.compile(regex);
@@ -81,7 +87,6 @@ public class RegisterActivity extends AppCompatActivity {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
-
     }
 
     private void registerUser(){
@@ -95,11 +100,14 @@ public class RegisterActivity extends AppCompatActivity {
         if(name.isEmpty()){
             etName.setError("Name cannot be empty");
             valid = false;
+        }else if (!isNameValid(name)){
+            etName.setError("Name cannot be numbers");
+            valid=false;
         }
 
         final String phone = etPhone.getText().toString();
         if(phone.isEmpty()){
-            etPhone.setError("Phone cannot be Empty");
+            etPhone.setError("Phone cannot be empty");
             valid=false;
         }else if (!isPhoneValid(phone)){
             etPhone.setError("Phone Number is invalid");
@@ -108,7 +116,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         final String address = etAddress.getText().toString();
         if(address.isEmpty()){
-            etAddress.setError("Address cannot be Empty");
+            etAddress.setError("Address cannot be empty");
             valid=false;
         }else if(address.length() < 15){
             etAddress.setError("Address must have at least 15 characters");
@@ -189,15 +197,15 @@ public class RegisterActivity extends AppCompatActivity {
                                     View sbView = snackbar.getView();
                                     sbView.setBackgroundColor(Color.parseColor("#FDA89F"));
                                     snackbar.show();
-                                }
-                                catch (Exception e)
+                                } catch (Exception e)
                                 {
                                     Snackbar snackbar = Snackbar.make(coordinatorLayout, "Sign up failed", Snackbar.LENGTH_SHORT);
                                     View sbView = snackbar.getView();
                                     sbView.setBackgroundColor(Color.parseColor("#FDA89F"));
                                     snackbar.show();
+                                } finally {
+                                    progressDialog.dismiss();
                                 }
-                                progressDialog.dismiss();
                             }
                         }
                     });
